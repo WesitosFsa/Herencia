@@ -1,4 +1,4 @@
-/*class FiguraGeometrica {
+class FiguraGeometrica {
     public int numeroLados;
     public double area;
     public double perimetro;
@@ -82,20 +82,5 @@ class TrianguloEscaleno extends FiguraGeometrica {
     @Override
     public void calcularArea() {
         this.area = (lado1 * altura) / 2.0;
-    }
-}*/
-public class Main {
-    public static void main(String[] args) {
-        // Corrección: Triángulo isósceles tiene 3 lados
-        Triangulo_Isoceles tr1 = new Triangulo_Isoceles(3, 4.5);
-
-        // Calcular área y perímetro antes de imprimir
-        tr1.calcularArea();
-        tr1.calcularPerimetro();
-
-        // Imprimir resultados
-        System.out.println("Lado desigual: " + tr1.getLado_desigual() +
-                           "\nÁrea: " + tr1.obtenerArea() +
-                           "\nPerímetro: " + tr1.obtenerPerimetro());
     }
 }
