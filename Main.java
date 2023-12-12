@@ -3,5 +3,7 @@ class Main {
     System.out.println("Testeo");
     int x=1 ;
     int y=2;
+    int z = 3;
+    int 
   }
 }
