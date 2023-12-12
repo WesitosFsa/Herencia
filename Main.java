@@ -5,6 +5,6 @@ class Main {
     int y=2;
     int z = 3;
     int w=4;
-    
+    float a=1.1;
   }
 }
