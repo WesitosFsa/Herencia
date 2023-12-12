@@ -68,6 +68,7 @@ class TrianguloEscaleno extends FiguraGeometrica {
     private double lado2;
     private double lado3;
     private double altura;
+    private double perimetro;
 
     public TrianguloEscaleno(double lado1, double lado2, double lado3, double altura) {
         super(3); 
@@ -82,5 +83,59 @@ class TrianguloEscaleno extends FiguraGeometrica {
     @Override
     public void calcularArea() {
         this.area = (lado1 * altura) / 2.0;
+    }
+}
+class Triangulo extends FiguraGeometrica {
+    private double base;
+    private double altura;
+
+    public Triangulo(double base, double altura) {
+        super(3);
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    @Override
+    public void calcularArea() {
+        this.area = (base * altura) / 2.0;
+    }
+
+    @Override
+    public void calcularPerimetro() {
+        // En un triángulo, el perímetro es la suma de los lados
+        this.perimetro = base + (2 * Math.sqrt(Math.pow(base / 2, 2) + Math.pow(altura, 2)));
+    }
+}
+
+class TrianguloEquilatero extends FiguraGeometrica {
+    private double lado;
+
+    public TrianguloEquilatero(double lado) {
+        super(3);
+        this.lado = lado;
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    @Override
+    public void calcularArea() {
+        // En un triángulo equilátero, la fórmula del área es (sqrt(3) / 4) * lado^2
+        this.area = (Math.sqrt(3) / 4) * Math.pow(lado, 2);
+    }
+
+    @Override
+    public void calcularPerimetro() {
+        // En un triángulo equilátero, el perímetro es simplemente 3 * lado
+        this.perimetro = 3 * lado;
     }
 }
