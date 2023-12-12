@@ -1,5 +1,6 @@
 class Main {
   public static void main(String[] args) {
     System.out.println("Testeo");
+    int x=1 ;
   }
 }
